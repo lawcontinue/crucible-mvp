@@ -119,7 +119,7 @@ async def auth_zhihu_callback(code: str = "", state: str = ""):
     logger.info(f"OAuth login: uid={user.uid} name={user.fullname}")
 
     # Redirect to home with session cookie
-    resp = RedirectResponse(url="/?auth=success", status_code=302)
+    resp = RedirectResponse(url="/", status_code=302)
     resp.set_cookie(
         key=SESSION_COOKIE,
         value=session_token,
