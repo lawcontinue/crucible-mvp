@@ -44,10 +44,11 @@ function useHash() {
   const [hash, setHash] = useState(window.location.hash || '#/');
   const navigate = useCallback((h) => { window.location.hash = h; }, []);
   const [, forceUpdate] = useState(0);
-  useState(() => {
+  React.useEffect(() => {
     const fn = () => { setHash(window.location.hash || '#/'); forceUpdate(n => n + 1); };
     window.addEventListener('hashchange', fn);
-  });
+    return () => window.removeEventListener('hashchange', fn);
+  }, []);
   return [hash, navigate];
 }
 
@@ -543,9 +544,9 @@ export default function App() {
   const [staticData, setStaticData] = useState(null);
 
   // Load static data once
-  useState(() => {
+  React.useEffect(() => {
     fetchStaticData().then(setStaticData).catch(() => {});
-  });
+  }, []);
 
   const path = hash.replace(/^#\/?/, '/') || '/';
 
