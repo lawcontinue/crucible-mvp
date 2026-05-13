@@ -12,8 +12,6 @@ from typing import Optional, Dict
 from dataclasses import dataclass
 
 import requests
-from cryptography.fernet import Fernet
-import base64
 import hashlib
 
 logger = logging.getLogger(__name__)
