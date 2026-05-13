@@ -5,6 +5,7 @@ APP_ID: 217
 """
 import os
 import time
+import base64
 import json
 import secrets
 import logging
@@ -57,6 +58,8 @@ def verify_state(state: str) -> bool:
 
 def _get_signing_key() -> bytes:
     """Derive a 32-byte signing key from JWT_SECRET or ZHIHU_APP_KEY"""
+    if not JWT_SECRET and not os.getenv("JWT_SECRET"):
+        logger.warning("JWT_SECRET not set - using ZHIHU_APP_KEY as fallback (not recommended for production)")
     src = JWT_SECRET or ZHIHU_APP_KEY or "crucible-dev-key-change-me"
     return hashlib.sha256(src.encode()).digest()
 
