@@ -20,13 +20,8 @@ function useZhihuAuth() {
     fetch('/api/auth/me').then(r => r.json()).then(data => {
       if (data.logged_in) {
         setUser(data.user);
-        setChecked(true);
-      } else {
-        // 未登录 → 直接跳知乎 OAuth，不显示页面
-        fetch('/api/auth/zhihu/url').then(r => r.json()).then(d => {
-          window.location.replace(d.authorize_url);
-        }).catch(() => setChecked(true));
       }
+      setChecked(true);
     }).catch(() => setChecked(true));
   }, []);
 
@@ -493,7 +488,8 @@ function StaticTopicPage({ topic, navigate }) {
               <div className="arena-col arena-pro">
                 <ArgCard side="pro" text={round.pro_argument} sources={topic.sources} animKey={`p-${animKey}`} aiLabel={round.ai_label} topic={topic.title} onDisagree={handleDisagree} />
               </div>
-              <div className="arena-clash">
+              <div className="arena-ai-notice">ℹ️ 以下论点由 AI 基于知乎真实回答分析生成，非原文。来源见下方链接。</div>
+          <div className="arena-clash">
                 <div className="clash-icon">⚡</div>
                 <div className="clash-line" />
               </div>
