@@ -9,6 +9,14 @@ function useZhihuAuth() {
 
   // 用 useEffect 避免渲染阶段跳转
   React.useEffect(() => {
+    // 防止循环：如果刚从 OAuth 回调失败回来，不再重定向
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('auth') === 'error') {
+      setChecked(true);
+      window.history.replaceState({}, '', '/');
+      return;
+    }
+
     fetch('/api/auth/me').then(r => r.json()).then(data => {
       if (data.logged_in) {
         setUser(data.user);
@@ -17,7 +25,7 @@ function useZhihuAuth() {
         // 未登录 → 直接跳知乎 OAuth，不显示页面
         fetch('/api/auth/zhihu/url').then(r => r.json()).then(d => {
           window.location.replace(d.authorize_url);
-        }).catch(() => setChecked(true)); // 失败了才显示页面
+        }).catch(() => setChecked(true));
       }
     }).catch(() => setChecked(true));
   }, []);
