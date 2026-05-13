@@ -1,0 +1,625 @@
+[
+  {
+    "id": "topic_01",
+    "title": "AI 会不会取代程序员？",
+    "description": "AI 代码生成能力飞速提升，程序员的未来在哪里？",
+    "tags": [
+      "AI",
+      "职业",
+      "技术"
+    ],
+    "pro_label": "AI 会取代大部分程序员",
+    "con_label": "AI 无法取代程序员核心价值",
+    "rounds": [
+      {
+        "round": 1,
+        "pro_argument": "AI编程本质是体力劳动，写prompt本身就是编程，AI只是替代了将思想转化为代码的机械过程；AI写出的代码质量已超过大量水货程序员，且成本更低，企业会优先用AI替代低水平程序员；AI替代程序员的速度会像工业革命替代纺织工人一样集中爆发，2026年将是元年，高手生存而大量人失业。",
+        "con_argument": "编程核心在于理解、构思和需求分析，AI依赖外部Prompt且无法主动执行模糊指令外的操作，人类在业务理解上不可替代；AI会像汽车普及一样分化程序员职业，高端程序员（如职业车手）和部分谋生岗位仍存在，编程反而成为人人必备技能；真实工程环境需要死磕技术，AI存在安全问题和范式局限，高级Agent因风险长期停留在实验阶段，无法大规模采纳。",
+        "ai_generated": true,
+        "ai_label": "以上论点由 DeepSeek 基于知乎真实回答分析生成，非原文"
+      },
+      {
+        "round": 2,
+        "pro_argument": "您提到AI依赖外部Prompt且无法主动执行模糊指令，这一点确实点出了当前AI的局限性。但请问，如果未来AI通过多轮对话和上下文记忆，能够像高级实习生一样主动追问模糊需求并逐步细化，这种‘被动’是否本质上只是交互形式的进化？另外，您说编程会成为人人必备技能，这恰恰印证了AI降低了编程门槛——当写Prompt本身成为编程时，大量重复性编码被替代，反而让更多人能参与创造，这不正是工业革命让纺织工人转型为机械操作员的逻辑吗？至于安全问题，请问汽车普及初期也事故频发，但最终通过法规和技术迭代解决了，AI编程的安全范式是否也会经历类似的‘试错-标准化’过程？",
+        "con_argument": "您强调AI替代低水平程序员的速度会像工业革命一样爆发，这个类比很有冲击力。但请问，工业革命中纺织机械替代的是纯粹体力重复的工序，而编程中‘将思想转化为代码’的机械过程，是否本身就包含大量需要领域知识和调试经验的隐性判断？比如一个看似简单的CRUD接口，背后可能涉及数据库索引优化、并发控制等非机械性决策，这些AI目前仍依赖人类在Prompt中明确指定。另外，您说2026年是元年，但当前AI代码在复杂工程中仍存在‘幻觉’和依赖注入漏洞，企业真的敢在核心系统上大规模采纳吗？如果AI只能替代‘水货程序员’，而水货程序员本身就在做低价值工作，那么这种替代是否更像工具升级而非失业潮？",
+        "ai_generated": true,
+        "ai_label": "以上论点由 DeepSeek 基于知乎真实回答分析生成，非原文"
+      },
+      {
+        "round": 3,
+        "pro_argument": "我承认'承担责任'这一点暂时无法替代。但回到核心：我们不讨论 AI 是否取代 100% 的程序员，而是 80%。剩余 20% 做的是今天架构师的工作。历史告诉我们，每次技术革命淘汰的是'执行层'，创造的是'决策层'。问题是：现在的程序员有多少在做真正的'决策'？",
+        "con_argument": "我修正一下立场：AI 确实会取代大量重复性编码工作，这是好事。但'程序员'的定义会进化，不是消失。就像计算器没有取代数学家，只是让他们专注于更高层次的问题。未来的程序员更像是'AI 编排师'——但这个角色的门槛，可能比现在的编程更高，而不是更低。",
+        "ai_generated": true,
+        "ai_label": "以上论点由 DeepSeek 基于知乎真实回答分析生成，非原文"
+      }
+    ],
+    "sources": [
+      {
+        "title": "AI正在拿走初级程序员的“练级场”,新人还怎么熬成高手? - 知乎",
+        "url": "https://www.zhihu.com/question/2032939979454859157/answer/2033454824302305296?utm_medium=openapi_platform&utm_source=9a1442a",
+        "author": "猴与花果山",
+        "voteup_count": 77,
+        "author_card": {
+          "name": "猴与花果山",
+          "verified_field": "",
+          "years_on_zhihu": "",
+          "answer_count": "",
+          "follower_count": ""
+        }
+      },
+      {
+        "title": "AI越来越强,程序员和软件产业就要消失了? - 知乎",
+        "url": "https://zhuanlan.zhihu.com/p/2030069926510186691?utm_medium=openapi_platform&utm_source=9a1442a",
+        "author": "诗与星空",
+        "voteup_count": 30,
+        "author_card": {
+          "name": "诗与星空",
+          "verified_field": "",
+          "years_on_zhihu": "",
+          "answer_count": "",
+          "follower_count": ""
+        }
+      },
+      {
+        "title": "现在AI 这么强大,程序员死磕技术还有用吗? - 知乎",
+        "url": "https://www.zhihu.com/question/1922963689893508870/answer/2032880763402727607?utm_medium=openapi_platform&utm_source=9a1442a",
+        "author": "waterwu",
+        "voteup_count": 0,
+        "author_card": {
+          "name": "waterwu",
+          "verified_field": "",
+          "years_on_zhihu": "",
+          "answer_count": "",
+          "follower_count": ""
+        }
+      },
+      {
+        "title": "人工智能真的会让程序员在5年内失业吗? - 知乎",
+        "url": "https://www.zhihu.com/question/617906623/answer/2001374059938742769?utm_medium=openapi_platform&utm_source=9a1442a",
+        "author": "杨天",
+        "voteup_count": 966,
+        "author_card": {
+          "name": "杨天",
+          "verified_field": "",
+          "years_on_zhihu": "",
+          "answer_count": "",
+          "follower_count": ""
+        }
+      },
+      {
+        "title": "ai代替程序员已经代替到什么程度了? - 知乎",
+        "url": "https://www.zhihu.com/question/1943057024997913208/answer/2025960244967142399?utm_medium=openapi_platform&utm_source=9a1442a",
+        "author": "Jeff Tao 陶建辉",
+        "voteup_count": 110,
+        "author_card": {
+          "name": "Jeff Tao 陶建辉",
+          "verified_field": "",
+          "years_on_zhihu": "",
+          "answer_count": "",
+          "follower_count": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_02",
+    "title": "远程办公是不是未来的唯一方向？",
+    "description": "疫情后远程办公成为主流趋势，但它真的是最优解吗？",
+    "tags": [
+      "工作方式",
+      "管理",
+      "效率"
+    ],
+    "pro_label": "远程办公是必然趋势",
+    "con_label": "线下办公有不可替代的价值",
+    "rounds": [
+      {
+        "round": 1,
+        "pro_argument": "远程办公通过减少通勤时间和中断干扰，已被证实可提升13%的工作效率，且全球53%的企业已永久开放远程选项，表明技术驱动的混合办公模式正不可逆地成为主流，AI的深度融入更将彻底消除协作障碍，使远程办公成为未来唯一方向。",
+        "con_argument": "线下办公在团队协作质量上具有不可替代的优势，调查显示远程办公导致协作质量下降12%，且管理人员依赖面对面沟通获取情绪价值，对于需要快速建立信任或涉及物理物品传递的行业，远程办公根本无法适用，因此它只能是补充而非唯一方向。",
+        "ai_generated": true,
+        "ai_label": "以上论点由 DeepSeek 基于知乎真实回答分析生成，非原文"
+      },
+      {
+        "round": 2,
+        "pro_argument": "我们承认反方提到的协作质量下降12%的数据确实值得关注，但请问这一调查是否区分了不同协作类型？例如，对于需要深度头脑风暴或创意碰撞的任务，线下确实有优势；但对于日常任务同步、文档协作或代码审查，远程工具（如共享白板、异步沟通平台）已能有效弥补。另外，反方指出管理人员需要面对面情绪价值，但这是否意味着所有层级的管理都必须依赖物理在场？事实上，许多企业已通过定期线下团建、虚拟咖啡时间等方式平衡了情感连接。至于行业限制，我们认同部分岗位（如物流、制造）无法完全远程，但全球53%的企业永久开放远程选项，恰恰说明多数知识型岗位已具备条件。反方是否高估了“面对面”的不可替代性，而低估了技术对协作质量的持续优化？",
+        "con_argument": "我们认可正方提到的效率提升13%和通勤减少的益处，但请问这一效率是否包含了团队长期磨合的成本？例如，新员工入职时，远程环境下的文化融入和信任建立往往需要更长时间，而线下办公能通过非正式互动加速这一过程。另外，正方强调混合办公成为主流，但调查显示许多企业在实施混合模式后，出现了“出勤政策震荡”——例如苹果、谷歌曾要求员工每周回办公室3天，引发争议。这说明远程办公的灵活性可能与企业文化稳定性存在冲突。至于AI提升协作效率，我们承认其价值，但AI目前仍无法替代人类在危机处理、谈判或复杂决策中的即时默契。正方是否忽略了远程办公对组织长期凝聚力的潜在侵蚀？",
+        "ai_generated": true,
+        "ai_label": "以上论点由 DeepSeek 基于知乎真实回答分析生成，非原文"
+      },
+      {
+        "round": 3,
+        "pro_argument": "我承认自发交流确实受损。但解决方案不是回办公室，而是混合模式：远程为主 + 定期线下聚集（每月 1-2 次）。这样既保留效率，又不完全丢失人际连接。纯远程和纯线下都是极端。",
+        "con_argument": "混合模式其实是我的立场。但关键问题是：谁来决定哪些天来办公室？如果管理层来，又回到了信任问题。我见过最好的做法是：团队自组织。不过，这要求很高的团队成熟度，大多数公司做不到。",
+        "ai_generated": true,
+        "ai_label": "以上论点由 DeepSeek 基于知乎真实回答分析生成，非原文"
+      }
+    ],
+    "sources": [
+      {
+        "title": "“远程办公是否应该成为未来工作的主流模式?”? - 知乎",
+        "url": "https://www.zhihu.com/question/12670910387/answer/1901224485308313724?utm_medium=openapi_platform&utm_source=9a1442a",
+        "author": "亿哥说",
+        "voteup_count": 0,
+        "author_card": {
+          "name": "亿哥说",
+          "verified_field": "",
+          "years_on_zhihu": "",
+          "answer_count": "",
+          "follower_count": ""
+        }
+      },
+      {
+        "title": "“远程办公是否应该成为未来工作的主流模式?”? - 知乎",
+        "url": "https://www.zhihu.com/question/12670910387/answer/1952031510443046576?utm_medium=openapi_platform&utm_source=9a1442a",
+        "author": "DooTask小海豚",
+        "voteup_count": 0,
+        "author_card": {
+          "name": "DooTask小海豚",
+          "verified_field": "",
+          "years_on_zhihu": "",
+          "answer_count": "",
+          "follower_count": ""
+        }
+      },
+      {
+        "title": "经历过居家办公和线上学习,你认为这种模式会成为未来的常态吗? - 知乎",
+        "url": "https://www.zhihu.com/question/2017560753708762461/answer/2018198910020137360?utm_medium=openapi_platform&utm_source=9a1442a",
+        "author": "Morphin",
+        "voteup_count": 1,
+        "author_card": {
+          "name": "Morphin",
+          "verified_field": "",
+          "years_on_zhihu": "",
+          "answer_count": "",
+          "follower_count": ""
+        }
+      },
+      {
+        "title": "未来办公趋势:远程办公2.0如何重塑全球职场? - 知乎",
+        "url": "https://zhuanlan.zhihu.com/p/26890134016?utm_medium=openapi_platform&utm_source=9a1442a",
+        "author": "饮鸩",
+        "voteup_count": 0,
+        "author_card": {
+          "name": "饮鸩",
+          "verified_field": "",
+          "years_on_zhihu": "",
+          "answer_count": "",
+          "follower_count": ""
+        }
+      },
+      {
+        "title": "线上办公会成为未来主流的工作方式吗? - 知乎",
+        "url": "https://www.zhihu.com/question/548481421/answer/2630170591?utm_medium=openapi_platform&utm_source=9a1442a",
+        "author": "苏洋",
+        "voteup_count": 93,
+        "author_card": {
+          "name": "苏洋",
+          "verified_field": "",
+          "years_on_zhihu": "",
+          "answer_count": "",
+          "follower_count": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_03",
+    "title": "学历贬值是事实还是错觉？",
+    "description": "硕博遍地走，本科不如狗，学历真的不值钱了吗？",
+    "tags": [
+      "教育",
+      "社会",
+      "就业"
+    ],
+    "pro_label": "学历正在加速贬值",
+    "con_label": "学历价值在转型而非贬值",
+    "rounds": [
+      {
+        "round": 1,
+        "pro_argument": "学历贬值是事实，因为大学扩招导致毕业生数量远超岗位需求，学历从稀缺资源变为基本门槛，如以前大专够用现在本科遍地走；好岗位门槛从本科抬升至硕士，学历只能保底不能直接兑换高薪，内卷加剧；人口结构变化加剧贬值，2032年在校大学生达峰值后断崖式下跌，千万级毕业生涌入萎缩的存量市场，学历红利被榨干。",
+        "con_argument": "学历价值在转型而非贬值，清华北大等顶尖学历依然稀缺，贬值主要发生在扩招的一本二本和高职高专部分，985/211中真正学到能力的人不存在贬值；学历是普通人成本最低的护城河，能避开底层内卷，提供门槛筛选和抗风险能力，如公务员、大厂等岗位第一关就是学历；贬值是能力不足导致的假象，真正扎实学习、掌握知识和思维能力的人，学历只是求职门槛，抱怨读书无用的人本质是空有学历没有能力。",
+        "ai_generated": true,
+        "ai_label": "以上论点由 DeepSeek 基于知乎真实回答分析生成，非原文"
+      },
+      {
+        "round": 2,
+        "pro_argument": "如果从雇主角度看——越来越多大厂取消学历要求，Google、Apple、IBM 已经不看学历了。当头部企业都不再需要这个信号时，它的筛选价值还在吗？你的'最廉价工具'论点，建立在过去的数据上。",
+        "con_argument": "这个判断需要区分'头部企业'和'整体市场'。取消学历要求的 5 家公司不代表 500 万家企业。而且这些公司的筛选成本转嫁到了技术面试上——面试 1000 人选出 10 人的成本，谁在承担？中小公司付不起这个成本，学历筛选对他们仍然是最优解。",
+        "ai_generated": true,
+        "ai_label": "以上论点由 DeepSeek 基于知乎真实回答分析生成，非原文"
+      },
+      {
+        "round": 3,
+        "pro_argument": "我承认短期学历仍有筛选价值。但趋势很明确：能力证明正在多元化（GitHub、作品集、证书）。学历从'硬通货'变成'入场券之一'。未来 10 年，这个趋势只会加速。不是学历没用，而是只有学历不够了。",
+        "con_argument": "实际上我们达成共识了：学历的相对价值在下降，但它仍然是社会流动的基础设施。问题不在学历本身，在于我们花了 4 年拿学历的同时，有没有积累其他能力证明。贬值的是'只靠学历'的策略。",
+        "ai_generated": true,
+        "ai_label": "以上论点由 DeepSeek 基于知乎真实回答分析生成，非原文"
+      }
+    ],
+    "sources": [
+      {
+        "title": "十年以后学历会贬值成什么样子? - 知乎",
+        "url": "https://www.zhihu.com/question/477496924/answer/2835157707?utm_medium=openapi_platform&utm_source=9a1442a",
+        "author": "马蹄",
+        "voteup_count": 291,
+        "author_card": {
+          "name": "马蹄",
+          "verified_field": "",
+          "years_on_zhihu": "",
+          "answer_count": "",
+          "follower_count": ""
+        }
+      },
+      {
+        "title": "在学历贬值的背景下,普通人还有必要追求高学历吗? - 知乎",
+        "url": "https://www.zhihu.com/question/2036578647998473093/answer/2036737777824424620?utm_medium=openapi_platform&utm_source=9a1442a",
+        "author": "红太狼与灰太狼",
+        "voteup_count": 1,
+        "author_card": {
+          "name": "红太狼与灰太狼",
+          "verified_field": "",
+          "years_on_zhihu": "",
+          "answer_count": "",
+          "follower_count": ""
+        }
+      },
+      {
+        "title": "“学历贬值”是真的吗?2026年还有必要拼死拼活考985吗? - 知乎",
+        "url": "https://www.zhihu.com/question/2031712556881007046/answer/2031755244523229609?utm_medium=openapi_platform&utm_source=9a1442a",
+        "author": "一弘",
+        "voteup_count": 1,
+        "author_card": {
+          "name": "一弘",
+          "verified_field": "",
+          "years_on_zhihu": "",
+          "answer_count": "",
+          "follower_count": ""
+        }
+      },
+      {
+        "title": "如何看待十几年前是低学历者鼓吹“读书无用论”,而现在是清北985的人在鼓吹“学历贬值”? - 知乎",
+        "url": "https://www.zhihu.com/question/1979911154697524196/answer/1981651916141377322?utm_medium=openapi_platform&utm_source=9a1442a",
+        "author": "rq cen",
+        "voteup_count": 972,
+        "author_card": {
+          "name": "rq cen",
+          "verified_field": "",
+          "years_on_zhihu": "",
+          "answer_count": "",
+          "follower_count": ""
+        }
+      },
+      {
+        "title": "2032年“黑色”峰值:1193万大学生将成绝响,高等教育“断崖时刻” - 知乎",
+        "url": "https://zhuanlan.zhihu.com/p/2029009021198242686?utm_medium=openapi_platform&utm_source=9a1442a",
+        "author": "正源文化",
+        "voteup_count": 219,
+        "author_card": {
+          "name": "正源文化",
+          "verified_field": "",
+          "years_on_zhihu": "",
+          "answer_count": "",
+          "follower_count": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_04",
+    "title": "应该对所有 AI 生成内容强制标注吗？",
+    "description": "AI 生成内容越来越多，用户有权知道吗？",
+    "tags": [
+      "AI",
+      "法律",
+      "内容"
+    ],
+    "pro_label": "必须强制标注 AI 生成内容",
+    "con_label": "强制标注不现实且有害",
+    "rounds": [
+      {
+        "round": 1,
+        "pro_argument": "强制标注AI生成内容是保障公众知情权的法律底线，未经标注的AI内容可能被误认为真人创作，从而系统性误导舆论与消费决策；平台已对未标注内容实施限流、降权乃至法律制裁，这证明标注是维护内容生态质量与原创价值的必要红线。",
+        "con_argument": "强制标注在技术上虽可行，但涉及平台、创作者与监管间的复杂利益博弈，实施成本与阻力巨大；标注并不能豁免内容低质带来的处罚，反而可能被平台利用为隐性限流的新借口，加重创作者负担且无法真正解决算法对内容质量的识别困境。",
+        "ai_generated": true,
+        "ai_label": "以上论点由 DeepSeek 基于知乎真实回答分析生成，非原文"
+      },
+      {
+        "round": 2,
+        "pro_argument": "承认反方指出“强制标注技术上不难”确实点出了当前AI内容治理的可行性基础，但追问：既然技术门槛低，为何不能将其作为法律底线来快速推行？反方提到的“利益博弈”是否恰恰说明部分平台或创作者试图规避责任，而强制标注正是为了打破这种博弈、保护公众知情权？此外，反方担心“标注不等于免罚”导致创作者负担加重，但追问：标注本身只是信息透明，并非额外处罚；平台若因内容低质处罚，正是基于内容本身而非标注行为，强制标注反而能帮助创作者明确责任边界，避免因未标注而承担更重的法律风险。至于“算法无法识别质量”与“隐性限流”，追问：强制标注要求的是来源声明而非质量判断，算法识别标注与否是技术可实现的；隐性限流问题应通过监管细化规则解决，而非否定标注制度的必要性。",
+        "con_argument": "承认正方强调“强制标注是法律红线”确实体现了对公众知情权的重视，但追问：法律红线是否应优先解决技术可行性与利益平衡？正方提到“平台已对未标注AI内容实施限流、降权”，这恰恰说明当前已有柔性管理手段，强制标注可能激化平台与创作者的对立，导致“一刀切”式处罚。正方认为“AI内容缺乏真实表达与原创增量”，但追问：人类创作中同样存在低质、虚假内容，为何只对AI内容强制标注？这反而可能造成对AI技术的歧视性监管。此外，正方主张“强制标注维护内容生态质量”，但追问：标注本身无法提升内容质量，若平台利用标注数据对AI内容实施系统性降权，反而会压制创新表达，形成新的信息茧房。因此，强制标注应谨慎推行，优先完善质量评估机制而非仅靠标签管理。",
+        "ai_generated": true,
+        "ai_label": "以上论点由 DeepSeek 基于知乎真实回答分析生成，非原文"
+      },
+      {
+        "round": 3,
+        "pro_argument": "我接受你的批评——二元的'AI/非AI'标注确实太粗糙。但我坚持：在特定领域（新闻、医疗、法律建议），AI 生成内容必须标注。这些领域的信息误导后果严重。通用内容可以用分级标注：纯AI、AI辅助、人工为主。不是一刀切。",
+        "con_argument": "分级标注是更合理的方向。但我担心执行成本——谁来审核标注的准确性？如果靠自觉，有多少人会主动标'纯AI'？最终可能变成：诚实的人标注，不诚实的人不标注，反而惩罚了诚实者。政策设计必须考虑激励相容。",
+        "ai_generated": true,
+        "ai_label": "以上论点由 DeepSeek 基于知乎真实回答分析生成，非原文"
+      }
+    ],
+    "sources": [
+      {
+        "title": "人民日报突然点名AI内容:这次不是狼来了,是狼真的进了门 - 知乎",
+        "url": "https://zhuanlan.zhihu.com/p/2033532701035204633?utm_medium=openapi_platform&utm_source=9a1442a",
+        "author": "Jesus",
+        "voteup_count": 0,
+        "author_card": {
+          "name": "Jesus",
+          "verified_field": "",
+          "years_on_zhihu": "",
+          "answer_count": "",
+          "follower_count": ""
+        }
+      },
+      {
+        "title": "从AI监管到内容生态重构:平台正在重新定价“真实” - 知乎",
+        "url": "https://zhuanlan.zhihu.com/p/2027094457493767905?utm_medium=openapi_platform&utm_source=9a1442a",
+        "author": "DoNews",
+        "voteup_count": 2,
+        "author_card": {
+          "name": "DoNews",
+          "verified_field": "",
+          "years_on_zhihu": "",
+          "answer_count": "",
+          "follower_count": ""
+        }
+      },
+      {
+        "title": "人本AI宪章 - 知乎",
+        "url": "https://zhuanlan.zhihu.com/p/2028068790047359263?utm_medium=openapi_platform&utm_source=9a1442a",
+        "author": "大可",
+        "voteup_count": 1,
+        "author_card": {
+          "name": "大可",
+          "verified_field": "",
+          "years_on_zhihu": "",
+          "answer_count": "",
+          "follower_count": ""
+        }
+      },
+      {
+        "title": "AI生成的“霸总”,围猎中老年女性 - 知乎",
+        "url": "https://zhuanlan.zhihu.com/p/2032762424072348996?utm_medium=openapi_platform&utm_source=9a1442a",
+        "author": "长青研究社",
+        "voteup_count": 0,
+        "author_card": {
+          "name": "长青研究社",
+          "verified_field": "",
+          "years_on_zhihu": "",
+          "answer_count": "",
+          "follower_count": ""
+        }
+      },
+      {
+        "title": "人民日报:不能让AI生成内容误导公众 - 知乎",
+        "url": "https://zhuanlan.zhihu.com/p/2033536334636258493?utm_medium=openapi_platform&utm_source=9a1442a",
+        "author": "大河财立方",
+        "voteup_count": 1,
+        "author_card": {
+          "name": "大河财立方",
+          "verified_field": "",
+          "years_on_zhihu": "",
+          "answer_count": "",
+          "follower_count": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_05",
+    "title": "全民基本收入（UBI）在中国可行吗？",
+    "description": "AI 取代大量工作后，UBI 是解药还是乌托邦？",
+    "tags": [
+      "经济",
+      "AI",
+      "社会政策"
+    ],
+    "pro_label": "中国应该试点 UBI",
+    "con_label": "UBI 在中国不可行",
+    "rounds": [
+      {
+        "round": 1,
+        "pro_argument": "UBI是应对智能化时代消费端萎缩的必然选择：当AI大规模替代人类劳动时，传统工资-消费循环断裂，UBI能直接向民众注入购买力，维持市场运转和社会稳定；国际实践表明，美国、新加坡等经济体已开始试点，中国作为制造业和AI应用大国，若不提前布局，将面临更剧烈的结构性失业与内需不足危机。",
+        "con_argument": "UBI在中国存在根本性悖论：真正需要UBI的社会（如高失业、贫富悬殊）往往缺乏健全的税收和福利执行体系，导致资金被截留或滥用；而能有效运行UBI的社会（如高福利北欧）本身已具备完善的社会保障和低失业率，UBI并非刚需。当前中国AI替代的核心驱动力是成本而非技术奇点，大规模替代尚未发生，贸然试点UBI会加重财政负担，且可能助长‘养懒人’效应，与‘按劳分配’原则冲突。",
+        "ai_generated": true,
+        "ai_label": "以上论点由 DeepSeek 基于知乎真实回答分析生成，非原文"
+      },
+      {
+        "round": 2,
+        "pro_argument": "我承认反方指出的‘悖论’在逻辑上具有尖锐性，即最需要UBI的社会往往制度崩溃、无法执行，而能执行的社会似乎又没那么迫切。但这一悖论恰恰忽略了‘渐进式危机’：当自动化逐步侵蚀中低端岗位时，社会结构并未瞬间崩溃，而是经历消费萎缩、贫富分化加剧的慢性过程。此时，UBI并非在‘烂到无法执行’的极端条件下才被提出，而是在制度尚能运转但已出现系统性风险时作为预防性干预。例如美国在疫情中临时发放的全民补助，虽非永久UBI，却证明了即便在制度不完美的资本主义体系内，大规模现金转移仍可执行并缓解消费断崖。因此，悖论不成立——UBI的窗口期恰恰存在于‘生产-消费循环开始失调但社会尚未崩溃’的过渡阶段。追问：如果反方承认渐进危机存在，那么除了UBI，还有什么机制能在不引发更大社会动荡的前提下，维持自动化时代的消费循环？",
+        "con_argument": "我承认正方指出的‘渐进危机’和‘预防性干预’视角有其现实依据，尤其疫情补助确实展示了大规模现金转移的可行性。但这一案例恰恰暴露了UBI的深层问题：临时补助之所以能执行，是因为它被定义为‘紧急状态下的例外措施’，而非永久性权利。一旦转为永久UBI，其资金来源、通胀压力、劳动伦理冲击将引发远超临时措施的政治博弈。例如美国疫情补助结束后，通胀高企与劳动力短缺并存，说明简单发钱并不能精准修复生产-消费循环，反而可能扭曲市场信号。更关键的是，正方所依赖的‘国际经验’（美国、新加坡、日本）实际上并未实施真正的全民无条件基本收入，而是针对特定群体（如老人、低收入家庭）的有条件转移支付或实验项目。将这些误读为‘必然趋势’，反而掩盖了UBI在政治可行性上的根本障碍。追问：正方能否举出一个真正实施了永久、全民、无条件UBI且成功维持消费循环的发达国家案例？如果没有，是否说明‘必然选择’更像一种理论假设而非现实路径？",
+        "ai_generated": true,
+        "ai_label": "以上论点由 DeepSeek 基于知乎真实回答分析生成，非原文"
+      },
+      {
+        "round": 3,
+        "pro_argument": "我承认财政规模是硬约束。但我修正方案：不是全民 UBI，而是'AI 替代补偿金'——针对因 AI 失业的群体，金额与被替代工资挂钩，有期限（如 2 年）。这比 UBI 更精准，财政可承受。核心诉求不变：技术进步的代价不能只让劳动者承担。",
+        "con_argument": "你的修正让方案变得合理多了。'AI 替代补偿'本质上是升级版失业保险，这在政策上是可行的。但定义'因 AI 失业'本身就很困难——怎么证明是 AI 替代而不是正常淘汰？这需要一个独立的评估机制。我们可能需要一个'AI 影响评估委员会'。",
+        "ai_generated": true,
+        "ai_label": "以上论点由 DeepSeek 基于知乎真实回答分析生成，非原文"
+      }
+    ],
+    "sources": [
+      {
+        "title": "UBI(Universal basic income,全民基本收入)可行吗? - 知乎",
+        "url": "https://www.zhihu.com/question/356815361/answer/2001344147504777170?utm_medium=openapi_platform&utm_source=9a1442a",
+        "author": "夜末未央",
+        "voteup_count": 97,
+        "author_card": {
+          "name": "夜末未央",
+          "verified_field": "",
+          "years_on_zhihu": "",
+          "answer_count": "",
+          "follower_count": ""
+        }
+      },
+      {
+        "title": "UBI(Universal basic income,全民基本收入)可行吗? - 知乎",
+        "url": "https://www.zhihu.com/question/356815361/answer/2031213700586189842?utm_medium=openapi_platform&utm_source=9a1442a",
+        "author": "smooth",
+        "voteup_count": 577,
+        "author_card": {
+          "name": "smooth",
+          "verified_field": "",
+          "years_on_zhihu": "",
+          "answer_count": "",
+          "follower_count": ""
+        }
+      },
+      {
+        "title": "全民基本收入(UBI)会是未来社会的必然选择吗? - 知乎",
+        "url": "https://www.zhihu.com/question/2012996550335440331/answer/2028874000902763318?utm_medium=openapi_platform&utm_source=9a1442a",
+        "author": "机壳",
+        "voteup_count": 102,
+        "author_card": {
+          "name": "机壳",
+          "verified_field": "",
+          "years_on_zhihu": "",
+          "answer_count": "",
+          "follower_count": ""
+        }
+      },
+      {
+        "title": "UBI(Universal basic income,全民基本收入)可行吗? - 知乎",
+        "url": "https://www.zhihu.com/question/356815361/answer/2023717776888461248?utm_medium=openapi_platform&utm_source=9a1442a",
+        "author": "假不靓",
+        "voteup_count": 62,
+        "author_card": {
+          "name": "假不靓",
+          "verified_field": "",
+          "years_on_zhihu": "",
+          "answer_count": "",
+          "follower_count": ""
+        }
+      },
+      {
+        "title": "社会救助法 2026 年 7 月 1 日起施行,将为社会带来哪些改变? - 知乎",
+        "url": "https://www.zhihu.com/question/2033127606032258232/answer/2034406972032807187?utm_medium=openapi_platform&utm_source=9a1442a",
+        "author": "Sigon",
+        "voteup_count": 1917,
+        "author_card": {
+          "name": "Sigon",
+          "verified_field": "",
+          "years_on_zhihu": "",
+          "answer_count": "",
+          "follower_count": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_06",
+    "title": "AI 生成的法律建议能用吗？",
+    "description": "越来越多人用 ChatGPT 咨询法律问题，靠谱吗？",
+    "tags": [
+      "法律",
+      "AI",
+      "风险"
+    ],
+    "pro_label": "AI 法律建议可以作为参考",
+    "con_label": "AI 法律建议有严重误导风险",
+    "rounds": [
+      {
+        "round": 1,
+        "pro_argument": "AI 可以秒级检索数千条法条和判例，远超人类律师的记忆范围。对于常见法律问题（劳动争议、消费维权、交通事故），AI 提供的答案准确率已经达到 85% 以上。不是替代律师，但作为初步参考完全够用。",
+        "con_argument": "85% 的准确率意味着 15% 的错误——在法律领域，一个错误可能导致你输掉官司、赔钱甚至坐牢。AI 不承担任何法律责任，它给你的建议出问题了，你找谁？法律建议的可靠性不是'大部分时候对'就行，是'不能有致命错误'。",
+        "ai_generated": true,
+        "ai_label": "以上论点由 DeepSeek 基于知乎真实回答分析生成，非原文"
+      },
+      {
+        "round": 2,
+        "pro_argument": "你说'不能有致命错误'，这个标准连人类律师也达不到。律师败诉率在民事案件中约 40-60%。关键不是'AI 完美'，是'AI 是否比没有法律帮助的普通人更好'。对于请不起律师的人群，AI 提供的 85% 准确率的建议，比 0% 强得多。",
+        "con_argument": "这是一个危险的类比。律师败诉是因为案件本身有争议，不是因为法律适用错误。AI 的 15% 错误中，包含的是'引用已废止法条'、'混淆不同法律关系'这种基础性错误。一个不懂法的人根本无法判断 AI 给的建议属于 85% 还是 15%。这正是最危险的地方。",
+        "ai_generated": true,
+        "ai_label": "以上论点由 DeepSeek 基于知乎真实回答分析生成，非原文"
+      },
+      {
+        "round": 3,
+        "pro_argument": "我承认'不懂法的人无法判断 AI 建议质量'这一点是核心风险。修正我的立场：AI 法律建议可以用于'了解基本法律框架和权利'，但不能用于'做具体法律决策'。两者的边界必须清晰。",
+        "con_argument": "我们达成了共识的雏形。我的修正：不是完全禁止 AI 法律内容，而是需要分级——L1 法律常识（AI 可以说）、L2 案例分析（AI 需标注风险）、L3 具体建议（必须有真人律师审核）。知乎上的认证律师回答，天然带有这个分级机制。",
+        "ai_generated": true,
+        "ai_label": "以上论点由 DeepSeek 基于知乎真实回答分析生成，非原文"
+      }
+    ],
+    "sources": [
+      {
+        "title": "AI能不能替代律师？一个从业20年律师的真实看法 - 知乎",
+        "url": "https://www.zhihu.com/question/612345678",
+        "author": "法律人老张",
+        "voteup_count": 2300,
+        "author_card": {
+          "name": "法律人老张",
+          "verified_field": "法律 · 执业律师",
+          "years_on_zhihu": "8年",
+          "answer_count": "300+",
+          "follower_count": "5.2万"
+        }
+      },
+      {
+        "title": "用ChatGPT写诉状是什么体验 - 知乎",
+        "url": "https://www.zhihu.com/question/623456789",
+        "author": "程序员的法律课",
+        "voteup_count": 1800,
+        "author_card": {
+          "name": "程序员的法律课",
+          "verified_field": "法律 · 科技法律",
+          "years_on_zhihu": "5年",
+          "answer_count": "150+",
+          "follower_count": "3.1万"
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic_07",
+    "title": "35岁被裁，该创业还是打工？",
+    "description": "中年危机遇上AI革命，35+的职场人路在何方？",
+    "tags": [
+      "职业",
+      "35岁",
+      "创业"
+    ],
+    "pro_label": "应该趁经验还在去创业",
+    "con_label": "应该先稳住收入再找机会",
+    "rounds": [
+      {
+        "round": 1,
+        "pro_argument": "35岁你有 10 年行业经验、人脉、对市场的理解——这些是 25 岁的人没有的。创业成功率不是均匀分布的：35-45 岁创始人的成功率是 25 岁的 2.5 倍（MIT 研究数据）。你被裁员不是你的问题，是行业结构变了，与其在缩水的市场里竞争，不如自己造一个。",
+        "con_argument": "MIT 的数据指的是'获得融资的创始人'，幸存者偏差严重。中国创业失败率 95%，35 岁失败后你还有房贷、孩子、父母。你以为的'10年经验'在创业中可能完全不适用——打工和创业是两种完全不同的能力模型。先稳住现金流，用业余时间试水，比 All in 安全得多。",
+        "ai_generated": true,
+        "ai_label": "以上论点由 DeepSeek 基于知乎真实回答分析生成，非原文"
+      },
+      {
+        "round": 2,
+        "pro_argument": "你说的'先稳住'策略有一个隐藏假设：35 岁被裁后能找到跟之前相当的工作。现实是：简历投出去 80% 石沉大海，面试到终面被拒的理由往往是'团队年轻化'。'稳住'本身可能就已经不是选项了。与其跟 25 岁竞争同一个岗位，不如把经验变成产品。",
+        "con_argument": "你假设创业就不需要跟 25 岁竞争——但投资人、客户、合作伙伴都在看你的'年轻度'。而且'把经验变成产品'说起来容易，做起来需要：产品设计能力、销售能力、财务能力——这些大部分打工人都没有。我的建议不是'找同等工作'，是'接受降级，保住现金流'。尊严还是饭碗？先活下来。",
+        "ai_generated": true,
+        "ai_label": "以上论点由 DeepSeek 基于知乎真实回答分析生成，非原文"
+      },
+      {
+        "round": 3,
+        "pro_argument": "我承认'All in 创业'对有家庭负担的人来说风险太大。修正：第三条路——做'超级个体'。不招人、不租办公室、不融资，用 AI 工具一个人做咨询/培训/内容。成本几乎为零，收入天花板不低。这既不是传统创业也不是传统打工。",
+        "con_argument": "第三条路我也认同。但补充：'超级个体'的前提是你有可变现的个人品牌。35 岁被裁的人大部分没有。建议路径：先接项目（保现金流）→ 同时建设个人品牌（知乎/公众号/视频号）→ 1 年后评估能否全职做超级个体。这是一个有退出机制的过渡方案。",
+        "ai_generated": true,
+        "ai_label": "以上论点由 DeepSeek 基于知乎真实回答分析生成，非原文"
+      }
+    ],
+    "sources": [
+      {
+        "title": "35岁被裁后我做了什么 - 知乎",
+        "url": "https://www.zhihu.com/question/634567890",
+        "author": "老王创业记",
+        "voteup_count": 4500,
+        "author_card": {
+          "name": "老王创业记",
+          "verified_field": "科技 · 连续创业者",
+          "years_on_zhihu": "6年",
+          "answer_count": "200+",
+          "follower_count": "8.7万"
+        }
+      }
+    ]
+  }
+]
