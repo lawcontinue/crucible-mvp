@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import { fetchStaticData, searchAndCrash, armMe } from './api';
 import './index.css';
 
@@ -7,24 +7,20 @@ function useZhihuAuth() {
   const [user, setUser] = useState(null);
   const [checked, setChecked] = useState(false);
 
-  useState(() => {
+  // 用 useEffect 避免渲染阶段跳转
+  React.useEffect(() => {
     fetch('/api/auth/me').then(r => r.json()).then(data => {
       if (data.logged_in) {
         setUser(data.user);
+        setChecked(true);
       } else {
-        // 未登录 → 自动跳转知乎 OAuth（跟其他参赛作品一致）
-        // 检查 URL 参数，避免回调后死循环
-        const params = new URLSearchParams(window.location.search);
-        if (params.get('auth') !== 'success' && params.get('auth') !== 'error') {
-          fetch('/api/auth/zhihu/url').then(r => r.json()).then(d => {
-            window.location.href = d.authorize_url;
-          });
-          return; // 不设 checked，保持 loading 状态
-        }
+        // 未登录 → 直接跳知乎 OAuth，不显示页面
+        fetch('/api/auth/zhihu/url').then(r => r.json()).then(d => {
+          window.location.replace(d.authorize_url);
+        }).catch(() => setChecked(true)); // 失败了才显示页面
       }
-      setChecked(true);
     }).catch(() => setChecked(true));
-  });
+  }, []);
 
   const login = () => {
     fetch('/api/auth/zhihu/url').then(r => r.json()).then(data => {
@@ -237,6 +233,13 @@ function HomePage({ navigate, staticData, onLoad }) {
   const [searchResult, setSearchResult] = useState(null);
   const [error, setError] = useState(null);
   const { user, checked, login, logout } = useZhihuAuth();
+
+  // 未确认登录状态前不渲染（避免闪现后跳转）
+  if (!checked) {
+    return <div style={{display:'flex',justifyContent:'center',alignItems:'center',height:'100vh',color:'#B7A56B'}}>
+      🔥 熔炉加载中...
+    </div>;
+  }
 
   const handleSearch = async () => {
     if (!searchQuery.trim()) return;
