@@ -42,9 +42,10 @@ async def lifespan(app: FastAPI):
 app = FastAPI(title="熔炉 Crucible", lifespan=lifespan)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://crucible.zeabur.app", "http://localhost:5173"],
+    allow_origins=["https://crucible.zeabur.app", "http://localhost:5173", "http://localhost:8003"],
     allow_methods=["*"],
     allow_headers=["*"],
+    allow_credentials=True,
 )
 
 
