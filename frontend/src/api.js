@@ -1,5 +1,5 @@
 // API client for Crucible backend
-const API_BASE = 'http://localhost:8003';
+const API_BASE = '';
 
 async function api(path, opts = {}) {
   const url = API_BASE + path;
