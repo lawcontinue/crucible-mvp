@@ -42,7 +42,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(title="熔炉 Crucible", lifespan=lifespan)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://crucible.zeabur.app", "http://localhost:5173"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -102,7 +102,8 @@ async def auth_zhihu_callback(code: str = "", authorization_code: str = "", stat
 
     # State verification (lenient for hackathon - log but don't block)
     if state and not zhihu_oauth.verify_state(state):
-        logger.warning(f"OAuth callback: state mismatch (may be pod restart)")
+        logger.warning(f"OAuth callback: state mismatch")
+        return RedirectResponse(url="/?auth=error", status_code=302)
 
     # Exchange code for token
     access_token = zhihu_oauth.exchange_code(code)
@@ -240,7 +241,10 @@ async def share_record(crash_id: str):
 
 
 @app.post("/api/crash/{crash_id}/publish")
-async def publish_to_ring(crash_id: str):
+async def publish_to_ring(crash_id: str, request: Request):
+    user = get_current_user(request)
+    if not user:
+        raise HTTPException(401, "Login required to publish")
     """发布碰撞记录到知乎圈子"""
     record = crucible.get_record(crash_id)
     if "error" in record:
