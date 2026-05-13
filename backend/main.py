@@ -448,11 +448,16 @@ async def search_and_crash(req: SearchTopicRequest):
     
     if extracted:
         try:
-            data = _json.loads(extracted)
+            json_str = extracted
+            if "```json" in json_str:
+                json_str = json_str.split("```json")[1].split("```")[0]
+            elif "```" in json_str:
+                json_str = json_str.split("```")[1].split("```")[0]
+            data = _json.loads(json_str.strip())
             pro_args = data.get("pro_args",[])
             con_args = data.get("con_args",[])
-        except:
-            pass
+        except Exception as e:
+            logger.warning(f"JSON parse failed for extract: {e}, raw: {extracted[:200]}")
     
     if not pro_args or not con_args:
         raise HTTPException(500, "Failed to extract arguments")
@@ -475,7 +480,12 @@ async def search_and_crash(req: SearchTopicRequest):
         )
         if resp:
             try:
-                d = _json.loads(resp)
+                json_str = resp
+                if "```json" in json_str:
+                    json_str = json_str.split("```json")[1].split("```")[0]
+                elif "```" in json_str:
+                    json_str = json_str.split("```")[1].split("```")[0]
+                d = _json.loads(json_str.strip())
                 rounds.append({"round":len(rounds)+1,"pro_argument":d.get("pro",""),"con_argument":d.get("con","")})
                 prev_pro = d.get("pro","")
                 prev_con = d.get("con","")
