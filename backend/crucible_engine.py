@@ -1,3 +1,4 @@
+from pathlib import Path
 """熔炉引擎 — 争议话题碰撞核心
 
 输入一个争议话题 → 从知乎真实回答中抽取论点 + AI 苏格拉底式再加工（3轮碰撞）
@@ -208,6 +209,111 @@ class CrucibleEngine:
         self._cache: Dict[str, ClashRecord] = {}
         self._hot_topics_cache: Optional[List[Dict]] = None
         self._hot_topics_cache_time: float = 0
+        self._data_file = Path(__file__).parent.parent / "data" / "crash_records.json"
+        self._load_records()
+
+    def _load_records(self):
+        """Load crash records from JSON file"""
+        try:
+            if self._data_file.exists():
+                data = json.loads(self._data_file.read_text())
+                for item in data:
+                    r = ClashRecord(
+                        crash_id=item["crash_id"],
+                        topic_id=item.get("topic_id", ""),
+                        topic_title=item["topic_title"],
+                        initial_stance=item.get("initial_stance"),
+                        final_stance=item.get("final_stance"),
+                        created_at=item.get("created_at", 0),
+                        published=item.get("published", False),
+                        user_id=item.get("user_id"),
+                    )
+                    for rd in item.get("rounds", []):
+                        r.rounds.append(ClashRound(
+                            round_number=rd["round"],
+                            pro_argument=rd["pro"],
+                            con_argument=rd["con"],
+                            source_authors=rd.get("source_authors", []),
+                        ))
+                    r.verdict = item.get("verdict")
+                    self._cache[r.crash_id] = r
+                logger.info(f"Loaded {len(self._cache)} crash records from file")
+        except Exception as e:
+            logger.error(f"Failed to load crash records: {e}")
+
+    def _save_records(self):
+        """Save crash records to JSON file"""
+        try:
+            self._data_file.parent.mkdir(parents=True, exist_ok=True)
+            data = []
+            for r in self._cache.values():
+                data.append({
+                    "crash_id": r.crash_id,
+                    "topic_id": r.topic_id,
+                    "topic_title": r.topic_title,
+                    "initial_stance": r.initial_stance,
+                    "final_stance": r.final_stance,
+                    "created_at": r.created_at,
+                    "published": r.published,
+                    "user_id": r.user_id,
+                    "verdict": r.verdict,
+                    "rounds": [{"round": rd.round_number, "pro": rd.pro_argument, "con": rd.con_argument, "source_authors": rd.source_authors} for rd in r.rounds],
+                })
+            self._data_file.write_text(json.dumps(data, ensure_ascii=False, indent=2))
+        except Exception as e:
+            logger.error(f"Failed to save crash records: {e}")
+
+
+    def _load_records(self):
+        """Load crash records from JSON file"""
+        try:
+            if self._data_file.exists():
+                data = json.loads(self._data_file.read_text())
+                for item in data:
+                    r = ClashRecord(
+                        crash_id=item["crash_id"],
+                        topic_id=item.get("topic_id", ""),
+                        topic_title=item["topic_title"],
+                        initial_stance=item.get("initial_stance"),
+                        final_stance=item.get("final_stance"),
+                        created_at=item.get("created_at", 0),
+                        published=item.get("published", False),
+                        user_id=item.get("user_id"),
+                    )
+                    for rd in item.get("rounds", []):
+                        r.rounds.append(ClashRound(
+                            round_number=rd["round"],
+                            pro_argument=rd["pro"],
+                            con_argument=rd["con"],
+                            source_authors=rd.get("source_authors", []),
+                        ))
+                    r.verdict = item.get("verdict")
+                    self._cache[r.crash_id] = r
+                logger.info(f"Loaded {len(self._cache)} crash records from file")
+        except Exception as e:
+            logger.error(f"Failed to load crash records: {e}")
+
+    def _save_records(self):
+        """Save crash records to JSON file"""
+        try:
+            self._data_file.parent.mkdir(parents=True, exist_ok=True)
+            data = []
+            for r in self._cache.values():
+                data.append({
+                    "crash_id": r.crash_id,
+                    "topic_id": r.topic_id,
+                    "topic_title": r.topic_title,
+                    "initial_stance": r.initial_stance,
+                    "final_stance": r.final_stance,
+                    "created_at": r.created_at,
+                    "published": r.published,
+                    "user_id": r.user_id,
+                    "verdict": r.verdict,
+                    "rounds": [{"round": rd.round_number, "pro": rd.pro_argument, "con": rd.con_argument, "source_authors": rd.source_authors} for rd in r.rounds],
+                })
+            self._data_file.write_text(json.dumps(data, ensure_ascii=False, indent=2))
+        except Exception as e:
+            logger.error(f"Failed to save crash records: {e}")
 
     def get_topics(self) -> List[Dict]:
         """获取争议话题列表（热榜 + 预置）"""
@@ -253,6 +359,7 @@ class CrucibleEngine:
         rounds = self._generate_rounds(topic)
         record.rounds = rounds
         self._cache[crash_id] = record
+        self._save_records()
 
         return {
             "crash_id": crash_id,
@@ -299,6 +406,7 @@ class CrucibleEngine:
             "comment": verdict.comment,
         }
 
+        self._save_records()
         return {
             "crash_id": verdict.crash_id,
             "stance_shift": verdict.initial_stance != verdict.final_stance,
@@ -343,6 +451,7 @@ class CrucibleEngine:
         if not record:
             return {"error": "Crash not found"}
         record.published = True
+        self._save_records()
         return {"crash_id": crash_id, "published": True}
 
     # ── 核心生成流程 ──────────────────────────────────
