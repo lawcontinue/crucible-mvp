@@ -93,8 +93,9 @@ async def auth_zhihu_url():
 
 
 @app.get("/api/auth/zhihu/callback")
-async def auth_zhihu_callback(code: str = "", state: str = ""):
+async def auth_zhihu_callback(code: str = "", authorization_code: str = "", state: str = ""):
     """知乎 OAuth 回调：换 token → 获取用户 → 写 cookie → 跳首页"""
+    code = code or authorization_code
     if not code:
         logger.warning("OAuth callback: missing code")
         return RedirectResponse(url="/?auth=error", status_code=302)
