@@ -120,7 +120,7 @@ def exchange_code(code: str) -> Optional[str]:
             "grant_type": "authorization_code",
             "redirect_uri": REDIRECT_URI,
             "code": code,
-        }, timeout=15)
+        }, timeout=30)
         data = resp.json()
         if data.get("access_token"):
             logger.info(f"OAuth token obtained, expires_in={data.get('expires_in')}")
@@ -138,7 +138,7 @@ def get_user_info(access_token: str) -> Optional[ZhihuUser]:
     try:
         resp = requests.get(USER_URL, headers={
             "Authorization": f"Bearer {access_token}"
-        }, timeout=15)
+        }, timeout=30)
         data = resp.json()
         if data.get("uid"):
             return ZhihuUser(
