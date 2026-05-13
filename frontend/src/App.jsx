@@ -9,7 +9,19 @@ function useZhihuAuth() {
 
   useState(() => {
     fetch('/api/auth/me').then(r => r.json()).then(data => {
-      if (data.logged_in) setUser(data.user);
+      if (data.logged_in) {
+        setUser(data.user);
+      } else {
+        // 未登录 → 自动跳转知乎 OAuth（跟其他参赛作品一致）
+        // 检查 URL 参数，避免回调后死循环
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('auth') !== 'success' && params.get('auth') !== 'error') {
+          fetch('/api/auth/zhihu/url').then(r => r.json()).then(d => {
+            window.location.href = d.authorize_url;
+          });
+          return; // 不设 checked，保持 loading 状态
+        }
+      }
       setChecked(true);
     }).catch(() => setChecked(true));
   });
@@ -21,7 +33,9 @@ function useZhihuAuth() {
   };
 
   const logout = () => {
-    fetch('/api/auth/logout', { method: 'POST' }).then(() => setUser(null));
+    fetch('/api/auth/logout', { method: 'POST' }).then(() => {
+      window.location.href = '/';
+    });
   };
 
   return { user, checked, login, logout };
