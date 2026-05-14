@@ -486,11 +486,12 @@ function StaticTopicPage({ topic, navigate }) {
           </div>
           {round && (
             <div className="arena">
+              <div className="arena-ai-notice">ℹ️ 以下论点由 AI 基于知乎真实回答分析生成，非原文。来源见下方链接。</div>
+            <div className="arena">
               <div className="arena-col arena-pro">
                 <ArgCard side="pro" text={round.pro_argument} sources={topic.sources} animKey={`p-${animKey}`} aiLabel={round.ai_label} topic={topic.title} onDisagree={handleDisagree} />
               </div>
-              <div className="arena-ai-notice">ℹ️ 以下论点由 AI 基于知乎真实回答分析生成，非原文。来源见下方链接。</div>
-          <div className="arena-clash">
+              <div className="arena-clash">
                 <div className="clash-icon">⚡</div>
                 <div className="clash-line" />
               </div>
