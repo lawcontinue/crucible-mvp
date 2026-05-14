@@ -485,8 +485,8 @@ function StaticTopicPage({ topic, navigate }) {
             </span>
           </div>
           {round && (
-            <div className="arena">
-              <div className="arena-ai-notice">ℹ️ 以下论点由 AI 基于知乎真实回答分析生成，非原文。来源见下方链接。</div>
+            <>
+            <div className="arena-ai-notice" style={{textAlign:'center',color:'var(--text-dim)',fontSize:'0.8rem',marginBottom:'0.5rem'}}>ℹ️ 以下论点由 AI 基于知乎真实回答分析生成，非原文。来源见下方链接。</div>
             <div className="arena">
               <div className="arena-col arena-pro">
                 <ArgCard side="pro" text={round.pro_argument} sources={topic.sources} animKey={`p-${animKey}`} aiLabel={round.ai_label} topic={topic.title} onDisagree={handleDisagree} />
@@ -499,6 +499,7 @@ function StaticTopicPage({ topic, navigate }) {
                 <ArgCard side="con" text={round.con_argument} sources={topic.sources} animKey={`c-${animKey}`} aiLabel={round.ai_label} topic={topic.title} onDisagree={handleDisagree} />
               </div>
             </div>
+            </>
           )}
           {armModal && (
             <ArmModal
