@@ -117,7 +117,7 @@ def get_authorize_url() -> Dict[str, str]:
 def exchange_code(code: str) -> Optional[str]:
     """Exchange authorization code for access_token"""
     try:
-        resp = requests.post(TOKEN_URL, json={
+        resp = requests.post(TOKEN_URL, data={
             "app_id": ZHIHU_APP_ID,
             "app_key": ZHIHU_APP_KEY,
             "grant_type": "authorization_code",
